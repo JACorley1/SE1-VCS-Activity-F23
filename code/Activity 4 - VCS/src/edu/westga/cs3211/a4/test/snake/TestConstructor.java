@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import edu.westga.cs3211.a4.model.Snake;
 
+/**
+ * @author Jacob Wilson
+ * @version Fall 2023
+ */
 public class TestConstructor {
 
 	@Test
