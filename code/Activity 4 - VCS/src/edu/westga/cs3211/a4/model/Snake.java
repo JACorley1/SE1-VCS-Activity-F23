@@ -7,7 +7,7 @@ package edu.westga.cs3211.a4.model;
  * @version Fall 2023
  */
 public class Snake {
-	private final String ERR_INVALID_LENGTH = "Length must be greater than 0.";
+	public static final String ERR_INVALID_LENGTH = "Length must be greater than 0.";
 	
 	private int lengthInches;
 	private boolean venomous;
