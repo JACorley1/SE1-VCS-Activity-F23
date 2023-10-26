@@ -6,24 +6,22 @@ import org.junit.jupiter.api.Test;
 
 import edu.westga.cs3211.a4.model.Snake;
 
-/**
- * @author Jacob Wilson
- * @version Fall 2023
- */
-public class TestConstructor {
+public class TestSetLengthInches {
 
 	@Test
 	public void testLengthBelowThreshold() {
+		Snake test = new Snake(1, true);
 		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-			new Snake(-1, true);
+			test.setLengthInches(-1);
 		});
 		assertEquals(exception.getMessage(), Snake.ERR_INVALID_LENGTH);
 	}
 	
 	@Test
 	public void testLengthAtThreshold() {
+		Snake test = new Snake(1, true);
 		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-			new Snake(0, true);
+			test.setLengthInches(0);
 		});
 		assertEquals(exception.getMessage(), Snake.ERR_INVALID_LENGTH);
 	}
@@ -31,18 +29,8 @@ public class TestConstructor {
 	@Test
 	public void testLengthAboveThreshold() {
 		Snake test = new Snake(1, true);
+		test.setLengthInches(1);
 		assertEquals(1, test.getLengthInches());
-	}
-	
-	public void testValidConstructor() {
-		Snake test1 = new Snake(7, true);
-		Snake test2 = new Snake(5, false);
-		
-		assertEquals(7, test1.getLengthInches());
-		assertEquals(true, test1.isVenomous());
-		
-		assertEquals(5, test2.getLengthInches());
-		assertEquals(false, test2.isVenomous());
 	}
 
 }
