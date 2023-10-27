@@ -2,7 +2,7 @@ package edu.westga.cs3211.a4.test.pig;
 
 /**
  * 
- * @author ahmad & jabesi
+ * @author Ahmad & Jabesi
  *
  * The class Pig
  * 
