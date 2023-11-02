@@ -7,8 +7,18 @@ import org.junit.jupiter.api.Test;
 class TestConstructor {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testValidConstructor() {
+		Pig pig = new Pig(true, 0);
+		
+		assertTrue(pig.getIsMale());
+		assertEquals(0, pig.getAge());
+	}
+	
+	@Test
+	void testInvalidConstructor() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			new Pig(true, -1);
+		});
 	}
 
 }
